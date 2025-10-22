@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+        sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+main {
+    width: 100%;
+    max-width: 37.5rem;
+}
+
+.main-navigation {
+    width: 100%;
+    max-width: 37.5rem;
+    margin: 0 auto 1.25rem;
+    background: white;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 0.9375rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-list li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.nav-list li a:hover {
+    background: #f5f5f5;
+    border-color: #333;
+}
+
+.nav-list li a:focus {
+    outline: 0.125rem solid #333;
+    outline-offset: 0.125rem;
+}
+
+.nav-list li a[aria-current="page"] {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.profile-card {
+    background: white;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.profile-header {
+    padding: 2.5rem 1.875rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.avatar-container {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.125rem solid #e0e0e0;
+    cursor: pointer;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.time {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.user-time {
+    font-size: 0.85rem;
+    color: #666;
+    font-family: "Courier New", monospace;
+}
+
+.bio-section {
+    padding: 1.875rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.user-bio {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: start;
+}
+
+.social-links {
+    padding: 1.875rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.section-title {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.9375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03125rem;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+.social-list li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.social-list li a:hover {
+    background: #f5f5f5;
+    border-color: #333;
+}
+
+.social-list li a:focus {
+    outline: 0.125rem solid #333;
+    outline-offset: 0.125rem;
+}
+
+.hobbies-section {
+    padding: 1.875rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.hobbies-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobbies-list li {
+    padding: 0.625rem 0 0.625rem 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    border-bottom: 0.0625rem solid #f0f0f0;
+}
+
+.hobbies-list li:last-child {
+    border-bottom: none;
+}
+
+.hobbies-list li:hover {
+    background-color: #f5f5f5;
+    transition: all ease-in-out 0.3s;
+}
+
+.dislikes-section {
+    padding: 1.875rem;
+}
+
+.dislikes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dislikes-list li {
+    padding: 0.625rem 0 0.625rem 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    border-bottom: 0.0625rem solid #f0f0f0;
+}
+
+.dislikes-list li:last-child {
+    border-bottom: none;
+}
+
+.dislikes-list li:hover {
+    background-color: #f5f5f5;
+    transition: all ease-in-out 0.3s;
+}
+
+.contact-page {
+    background: white;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.contact-page .page-header {
+    padding: 2.5rem 1.875rem;
+    text-align: center;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.contact-page .page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.contact-page .page-header p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.contact-page .contact-form-section {
+    padding: 1.875rem;
+}
+
+.contact-page .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact-page .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-page .form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-page .required {
+    color: #e53e3e;
+}
+
+.contact-page .form-input,
+.contact-page .form-textarea {
+    padding: 0.75rem;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.contact-page .form-input:focus,
+.contact-page .form-textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.contact-page .form-textarea {
+    resize: vertical;
+    min-height: 6.25rem;
+}
+
+.contact-page .error-message {
+    font-size: 0.85rem;
+    color: #e53e3e;
+    min-height: 1.25rem;
+    display: block;
+}
+
+.contact-page .submit-button {
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+}
+
+.contact-page .submit-button:hover {
+    background: #1a1a1a;
+}
+
+.contact-page .submit-button:focus {
+    outline: 0.125rem solid #333;
+    outline-offset: 0.125rem;
+}
+
+.contact-page .success-message {
+    padding: 1rem;
+    background: #f0fdf4;
+    border: 0.0625rem solid #86efac;
+    border-radius: 0.25rem;
+    color: #166534;
+    text-align: center;
+}
+
+.contact-page .success-message {
+    opacity: 0;
+    transform: translateY(-6px);
+    max-height: 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 250ms ease, transform 250ms ease, max-height 300ms ease,
+        padding 200ms ease;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contact-page .success-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 200px;
+    padding: 1rem;
+    pointer-events: auto;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    display: block;
+    min-height: 18px;
+}
+
+.success-message {
+    background: #e6ffe6;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: all 0.3s ease;
+}
+
+.success-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .user-bio {
+        text-align: center;
+    }
+
+    .user-name {
+        font-size: 1.3rem;
+    }
+
+    .avatar-container {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+
+    .profile-header {
+        padding: 1.875rem 1.25rem;
+    }
+
+    .bio-section,
+    .social-links,
+    .hobbies-section,
+    .dislikes-section {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-page .page-header {
+        padding: 1.875rem 1.25rem;
+    }
+
+    .contact-page .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-page .contact-form-section {
+        padding: 1.25rem;
+    }
+}
+
+.about-page {
+    background: white;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.about-page .page-header {
+    padding: 2.5rem 1.875rem;
+    text-align: center;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.about-page .page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.about-page .page-header p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.about-page .about-section {
+    padding: 1.875rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.about-page .about-section-last {
+    border-bottom: none;
+}
+
+.about-page .about-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03125rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.about-page .about-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.about-page .about-section p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: start;
+}
+
+.about-page .about-section p:last-child {
+    margin-bottom: 0;
+}
+
+.about-page .about-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 0;
+}
+
+.about-page .about-list li {
+    padding: 0.625rem 0 0.625rem 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    position: relative;
+    border-bottom: 0.0625rem solid #f0f0f0;
+    line-height: 1.6;
+}
+
+.about-page .about-list li:last-child {
+    border-bottom: none;
+}
+
+.about-page .about-list li:hover {
+    background-color: #f5f5f5;
+    transition: all ease-in-out 0.3s;
+}
+
+.about-page .confidence-list li::before {
+    content: "•";
+    left: 0.5rem;
+}
+
+.about-page .future-note {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 0.25rem solid #333;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+}
+
+.about-page .future-note p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.about-page .future-note p:last-child {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .about-page .page-header {
+        padding: 1.875rem 1.25rem;
+    }
+
+    .about-page .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-page .about-section {
+        padding: 1.25rem;
+    }
+
+    .about-page .future-note {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Personal Profile Card" />
+        <title>Profile Card</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <nav class="main-navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="./index.html" aria-current="page">Profile</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./about.html">About Me</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <article class="profile-card" data-testid="test-profile-card">
+                <header class="profile-header">
+                    <figure class="avatar-container">
+                        <input
+                            type="file"
+                            id="avatar-upload"
+                            accept="image/png, image/jpeg, image/jpg, image/gif, image/webp"
+                            hidden
+                        />
+
+                        <img
+                            class="avatar"
+                            id="user-avatar"
+                            src="./images/default.jpeg"
+                            alt="User profile picture"
+                            role="profile image"
+                            data-testid="test-user-avatar"
+                            style="cursor: pointer"
+                        />
+                    </figure>
+
+                    <div class="profile-info">
+                        <h1
+                            class="user-name"
+                            aria-label="User's name"
+                            data-testid="test-user-name"
+                        >
+                            Daniel Udechukwu
+                        </h1>
+                        <div class="time">
+                            <p class="user-time">Time in ms:</p>
+                            <p
+                                class="user-time"
+                                id="user-time"
+                                aria-label="current time in millisonds"
+                                data-testid="test-user-time"
+                            ></p>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="bio-section">
+                    <p
+                        class="user-bio"
+                        aria-label="user bio"
+                        data-testid="test-user-bio"
+                    >
+                        Passionate developer and creative thinker with a love
+                        for building elegant solutions to complex problems.
+                        Always learning and exploring new technologies.
+                    </p>
+                </section>
+
+                <nav
+                    class="social-links"
+                    aria-label="social media links"
+                    data-testid="test-user-social-links"
+                >
+                    <h2 class="section-title" aria-label="social link title">
+                        Connect With Me
+                    </h2>
+                    <ul class="social-list">
+                        <li>
+                            <a
+                                href="https://x.com/ChumaUdechukwu"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Check me out on Twitter(X)"
+                                data-testid="test-user-social-twitter"
+                                >Twitter</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/DanielUdechukwu"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Check me out on GitHub"
+                                data-testid="test-user-social-github"
+                                >GitHub</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/udechukwudc/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Check me out on Linkedin"
+                                data-testid="test-user-social-linkedin"
+                                >LinkedIn</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Check me out on Instagram"
+                                data-testid="test-user-social-instagram"
+                                >Instagram</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="hobbies-section" aria-label="Hobbies">
+                    <h2 class="section-title" aria-label="Hobbies title">
+                        Hobbies
+                    </h2>
+                    <ul class="hobbies-list" data-testid="test-user-hobbies">
+                        <li>Playing CODM and Bloodstrike</li>
+                        <li>Reading Self Help Books</li>
+                        <li>Building IoT Devices</li>
+                        <li>Working with Power Tools</li>
+                    </ul>
+                </section>
+
+                <section class="dislikes-section" aria-label="Dislikes">
+                    <h2 class="section-title" aria-label="Dislikes title">
+                        Dislikes
+                    </h2>
+                    <ul class="dislikes-list" data-testid="test-user-dislikes">
+                        <li>Traffic jams</li>
+                        <li>Lies</li>
+                        <li>Crowded Areas</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
